@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
 #define max_tam 100 // define o tamanho máximo para o polinômio
 
@@ -8,10 +7,18 @@ int calc_polinomio(int polinomio[], int grau, int num) {
     int resultado = 0, i;
     for (i = 0; i <= grau; i++) {
         int elevado = abs(i - grau);
-        resultado = (polinomio[i] * (pow(num, elevado))) + resultado;
+        
+        // Calcular num^elevado manualmente
+        int pot = 1;
+        for (int j = 0; j < elevado; j++) {
+            pot *= num;
+        }
+        
+        resultado = (polinomio[i] * pot) + resultado;
     }
     return resultado;
 }
+
 
 void soma_polinomios(int polinomio1[], int grau1, int polinomio2[], int grau2, int resultado[]) {
     int i, max_grau, cont = 0;
