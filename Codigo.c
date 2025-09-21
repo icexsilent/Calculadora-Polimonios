@@ -1,3 +1,7 @@
+#Pedro Camargo de Mello RA: 10419017
+#Rodrigo piloto Medeiros RA: 10387326
+#Vinicius Rampazi de Oliveira RA: 10426499
+
 #include <stdio.h>
 #include <stdlib.h>
 
